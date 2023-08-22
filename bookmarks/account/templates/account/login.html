@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Bookmarks {% endblock %}
+
+{% block content %}
+
+<h1>Log-in</h1>
+<p>please, use the following form to log-in:</p>
+<form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="log-in"></p>
+</form>
+
+{% endblock %}
